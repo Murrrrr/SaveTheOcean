@@ -43,8 +43,8 @@ window.onload=function(){
     arrow2.style.marginLeft = -(arrow2.getBoundingClientRect().width/2) + "px";
 
 
+
     window.addEventListener('scroll', function(){
-        console.log(window);
         let value = window.scrollY;
         sun.style.top = value * 0.15 + '%';
         wave1.style.top =  (80 + value * -0.07)  + '%';
@@ -62,9 +62,8 @@ window.onload=function(){
         
 
         header.style.opacity = 1 - (value * 0.009);
-        console.log(scrollY);
         
-        if(scrollY > 300){
+        if(get_scroll_percentage() > 12){
             sun.style.opacity = "0";
             submarine.style.opacity = "0.5";
             light.style.opacity = "0.5";
@@ -126,7 +125,6 @@ window.onload=function(){
             document.querySelector('#earth-warning').style.bottom = "10%";
         }
             
-        console.log(submarine.style.opacity);
         
     })
 
@@ -145,6 +143,11 @@ window.onload=function(){
     }
 
     setInterval(waterdropAnimation, 2000);
+
+    function get_scroll_percentage() {
+        return ((document.body.scrollTop + window.innerHeight) / document.documentElement.scrollHeight
+        ) * 100;
+    }
 
     function waterdropAnimation(){
         waterDrop.style.transition = "all 0.8s ease-in-out";
