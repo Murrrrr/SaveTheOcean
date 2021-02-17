@@ -28,7 +28,7 @@ body {
 .intro_page {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .intro_page .scroll-animation-wrapper #arrow {
@@ -147,10 +147,11 @@ body {
 }
 
 .intro_page #submarine {
-  position: relative;
+  left: 50%;
+  position: absolute;
   display: block;
   margin: 0 auto;
-  z-index: 7;
+  z-index: 3;
   width: 30%;
   opacity: 1;
   -webkit-animation: submarine_floating 2s infinite alternate ease-in-out;
@@ -205,52 +206,73 @@ body {
 
 .intro_page .wave-container {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-}
-
-.intro_page .wave-container img {
-  position: absolute;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  pointer-events: none;
+  height: 100vh;
+  position: relative;
+  top: 50%;
 }
 
 .intro_page .wave-container #wave1 {
+  top: 0%;
+  width: 100%;
+  position: absolute;
   z-index: 9;
-  top: 80%;
 }
 
 .intro_page .wave-container #wave2 {
+  top: -8%;
+  width: 100%;
+  position: absolute;
   z-index: 8;
 }
 
 .intro_page .wave-container #wave3 {
-  z-index: 2;
+  top: -16%;
+  width: 100%;
+  position: absolute;
+  z-index: 7;
 }
 
 .intro_page .wave-container #wave4 {
-  z-index: 1;
+  top: -24%;
+  width: 100%;
+  position: absolute;
+  z-index: 6;
 }
 
-.contents_page {
+.contents_page-background {
   position: relative;
   top: 0;
   z-index: 6;
   width: 100%;
-  height: 350%;
+  height: 300%;
 }
 
-.contents_page #introBubble {
-  opacity: 0.5;
-  width: 100%;
+.contents_page-background .garbage {
   position: absolute;
-  top: -20%;
+  left: 50%;
 }
 
-.contents_page #ocean-background {
+.contents_page-background #pollution1 {
+  position: absolute;
+  top: 8%;
+  width: 100%;
+}
+
+.contents_page-background #pollution2 {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  left: 0;
+}
+
+.contents_page-background #pollution3 {
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  left: 0;
+}
+
+.contents_page-background #ocean-background {
   opacity: 0.5;
   top: 0%;
   width: 100%;
@@ -258,7 +280,7 @@ body {
   z-index: 0;
 }
 
-.contents_page #ocean-background2 {
+.contents_page-background #ocean-background2 {
   opacity: 0.3;
   top: 40%;
   width: 100%;
@@ -266,7 +288,141 @@ body {
   z-index: 0;
 }
 
-.contents_page .contents-info-wrapper {
+.contents_page-background .contents_page {
+  width: 90%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+.contents_page-background .contents_page .garbage_contents {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.contents_page-background .contents_page .garbage_contents #garbage1 {
+  width: 100%;
+  top: 0;
+}
+
+.contents_page-background .contents_page .garbage_contents #garbage2 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 90%;
+  top: 40%;
+}
+
+.contents_page-background .contents_page .garbage_contents button {
+  top: 55%;
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 10px solid #ff5151;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.contents_page-background .contents_page .garbage_contents #garbage-contents-wrapper {
+  float: right;
+  position: relative;
+  z-index: 10;
+  top: 60%;
+  right: 5%;
+  width: 35%;
+}
+
+.contents_page-background .contents_page .garbage_contents #garbage-contents-wrapper .garbage-contents-info {
+  width: 50%;
+}
+
+.contents_page-background .contents_page .garbage_contents #garbage-contents-wrapper .garbage-contents-info h2 {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.contents_page-background .contents_page .garbage_contents #garbage-contents-wrapper .garbage-contents-info p {
+  font-size: 0.8rem;
+  padding: 0 1rem;
+  line-height: 1.3rem;
+  font-weight: bold;
+}
+
+.contents_page-background .contents_page .garbage_contents #garbage-contents-wrapper img {
+  top: 0;
+  width: 50%;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.contents_page-background .contents_page .animal-contents {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.contents_page-background .contents_page .animal-contents #garbage3 {
+  width: 70%;
+}
+
+.contents_page-background .contents_page .animal-contents #turtle {
+  position: absolute;
+  width: 20%;
+  top: 15%;
+  left: 3%;
+  opacity: 0.7;
+  transform: rotate(0deg);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -webkit-filter: FlipH;
+          filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.contents_page-background .contents_page .animal-contents button {
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 10px solid #ff5151;
+  background-color: transparent;
+  z-index: 9;
+}
+
+.contents_page-background .contents_page .animal-contents #animal-contents-wrapper {
+  position: relative;
+  top: 45%;
+  width: 35%;
+  left: 15%;
+}
+
+.contents_page-background .contents_page .animal-contents #animal-contents-wrapper #animal-contents-info {
+  width: 50%;
+}
+
+.contents_page-background .contents_page .animal-contents #animal-contents-wrapper #animal-contents-info h2 {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.contents_page-background .contents_page .animal-contents #animal-contents-wrapper #animal-contents-info p {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  padding: 1rem;
+  padding-top: 0;
+  font-weight: bold;
+}
+
+.contents_page-background .contents_page .animal-contents #animal-contents-wrapper img {
+  width: 50%;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.contents_page-background .contents_page .contents-info-wrapper {
   padding: 1rem;
   width: 30%;
   display: -webkit-box;
@@ -277,137 +433,18 @@ body {
   position: absolute;
 }
 
-.contents_page .garbage-contents {
+.contents_page-background .nuclear-contents {
   width: 100%;
+  height: 100%;
   position: relative;
 }
 
-.contents_page .garbage-contents button {
-  cursor: pointer;
-  position: absolute;
-  top: 70%;
-  right: 10%;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  border: 10px solid #ff5151;
-  background-color: transparent;
-  z-index: 10;
+.contents_page-background .nuclear-contents #garbage4 {
+  opacity: 0.5;
 }
 
-.contents_page .garbage-contents #garbage-contents-wrapper {
-  position: relative;
-  z-index: 10;
-  top: 80%;
-  right: 10%;
-}
-
-.contents_page .garbage-contents #garbage-contents-wrapper .garbage-contents-info {
-  width: 50%;
-}
-
-.contents_page .garbage-contents #garbage-contents-wrapper .garbage-contents-info h2 {
-  font-size: 1.2rem;
-  padding: 1rem;
-}
-
-.contents_page .garbage-contents #garbage-contents-wrapper .garbage-contents-info p {
-  font-size: 0.8rem;
-  padding: 1rem;
-  padding-top: 0;
-  line-height: 1.3rem;
-  font-weight: bold;
-}
-
-.contents_page .garbage-contents #garbage-contents-wrapper .garbage-contents-image {
-  width: 50%;
-}
-
-.contents_page .garbage-contents #garbage-contents-wrapper .garbage-contents-image img {
-  position: relative;
-  top: 50%;
-  width: 100%;
-  padding-right: 1rem;
-}
-
-.contents_page .animal-contents {
-  position: relative;
-}
-
-.contents_page .animal-contents #pollution2 {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.contents_page .animal-contents #turtle {
-  position: absolute;
-  width: 20%;
-  top: 15%;
-  left: 3%;
-  opacity: 1;
-  transform: rotate(0deg);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  -webkit-filter: FlipH;
-          filter: FlipH;
-  -ms-filter: "FlipH";
-}
-
-.contents_page .animal-contents button {
-  cursor: pointer;
-  position: absolute;
-  top: 30%;
-  left: 15%;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  border: 10px solid #ff5151;
-  background-color: transparent;
-  z-index: 9;
-}
-
-.contents_page .animal-contents #animal-contents-wrapper {
-  top: 40%;
-  left: 15%;
-}
-
-.contents_page .animal-contents #animal-contents-wrapper #animal-contents-info {
-  width: 50%;
-}
-
-.contents_page .animal-contents #animal-contents-wrapper #animal-contents-info h2 {
-  font-size: 1.2rem;
-  padding: 1rem;
-}
-
-.contents_page .animal-contents #animal-contents-wrapper #animal-contents-info p {
-  font-size: 0.8rem;
-  line-height: 1.3rem;
-  padding: 1rem;
-  padding-top: 0;
-  font-weight: bold;
-}
-
-.contents_page .animal-contents #animal-contents-wrapper .animals-contents-image {
-  width: 50%;
-}
-
-.contents_page .animal-contents #animal-contents-wrapper .animals-contents-image img {
-  padding-right: 1rem;
-  position: relative;
-  top: 50%;
-  width: 100%;
-}
-
-.contents_page .nuclear-contents {
-  position: relative;
-  height: 50%;
-}
-
-.contents_page .nuclear-contents #nuclearPollution {
-  opacity: 1;
+.contents_page-background .nuclear-contents #nuclearPollution {
+  opacity: 0.7;
   position: absolute;
   width: 20%;
   top: 0%;
@@ -417,7 +454,7 @@ body {
   z-index: 1;
 }
 
-.contents_page .nuclear-contents button {
+.contents_page-background .nuclear-contents button {
   cursor: pointer;
   position: absolute;
   top: 10%;
@@ -430,21 +467,28 @@ body {
   z-index: 9;
 }
 
-.contents_page .nuclear-contents #nuclear-contents-wrapper {
+.contents_page-background .nuclear-contents #nuclear-contents-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   right: 13%;
   top: 15%;
+  width: 35%;
 }
 
-.contents_page .nuclear-contents #nuclear-contents-wrapper #nuclear-contents-info {
+.contents_page-background .nuclear-contents #nuclear-contents-wrapper #nuclear-contents-info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   width: 50%;
 }
 
-.contents_page .nuclear-contents #nuclear-contents-wrapper #nuclear-contents-info h2 {
+.contents_page-background .nuclear-contents #nuclear-contents-wrapper #nuclear-contents-info h2 {
   font-size: 1.2rem;
   padding: 1rem;
 }
 
-.contents_page .nuclear-contents #nuclear-contents-wrapper #nuclear-contents-info p {
+.contents_page-background .nuclear-contents #nuclear-contents-wrapper #nuclear-contents-info p {
   font-size: 0.8rem;
   padding: 1rem;
   padding-top: 0;
@@ -452,15 +496,12 @@ body {
   font-weight: bold;
 }
 
-.contents_page .nuclear-contents #nuclear-contents-wrapper .nuclear-contents-image {
+.contents_page-background .nuclear-contents #nuclear-contents-wrapper img {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  padding: 1rem 1rem 1rem 0;
   width: 50%;
-}
-
-.contents_page .nuclear-contents #nuclear-contents-wrapper .nuclear-contents-image img {
-  padding-right: 1rem;
-  position: relative;
-  top: 50%;
-  width: 100%;
 }
 
 .last_page {
@@ -536,7 +577,7 @@ body {
   letter-spacing: 1px;
   font-size: 1.5rem;
   font-weight: bold;
-  opacity: 0;
+  opacity: 1;
 }
 
 .final-info-section .info-container .drinking-water .warning-wrapper p {
@@ -544,7 +585,7 @@ body {
   transition: opacity 0.5s;
   padding: 0 1rem;
   width: 80%;
-  opacity: 0;
+  opacity: 1;
   line-height: 1.5rem;
 }
 
@@ -584,7 +625,7 @@ body {
   letter-spacing: 1px;
   font-size: 1.5rem;
   font-weight: bold;
-  opacity: 0;
+  opacity: 1;
 }
 
 .final-info-section .info-container .death-animals p {
@@ -592,7 +633,7 @@ body {
   transition: opacity 0.5s;
   padding: 0 1rem;
   width: 80%;
-  opacity: 0;
+  opacity: 1;
   line-height: 1.5rem;
 }
 
@@ -641,7 +682,7 @@ body {
   letter-spacing: 1px;
   font-size: 1.5rem;
   font-weight: bold;
-  opacity: 0;
+  opacity: 1;
 }
 
 .final-info-section .info-container .protect-earth #earth-warning p {
@@ -649,6 +690,6 @@ body {
   transition: opacity 0.5s;
   padding: 0 1rem;
   width: 80%;
-  opacity: 0;
+  opacity: 1;
   line-height: 1.5rem;
 }

@@ -35,97 +35,93 @@ const scroll_animation_wrapper = document.querySelector('.scroll-animation-wrapp
 
 window.onload=function(){
     
-    let submarine_top = submarine.style.top;
-    garbage_contents_image.style.marginTop = -(garbage_contents_image.getBoundingClientRect().height/2) + "px";
-    animal_contents_image.style.marginTop = -(animal_contents_image.getBoundingClientRect().height/2) + "px";
-    nuclear_contents_image.style.marginTop = -(nuclear_contents_image.getBoundingClientRect().height/2) + "px";
+    
+
+    // let submarine_top = submarine.style.top;
     arrow.style.marginLeft = -(arrow.getBoundingClientRect().width/2) + "px";
     arrow2.style.marginLeft = -(arrow2.getBoundingClientRect().width/2) + "px";
+    // submarine.style.marginLeft = -(submarine.getBoundingClientRect().width/2) + "px";
+    garbage2.style.marginLeft = -(garbage2.getBoundingClientRect().width/2) + "px";
+    garbage1.style.marginLeft = -(garbage1.getBoundingClientRect().width/2) + "px";
+    garbage3.style.marginLeft = -(garbage3.getBoundingClientRect().width/2) + "px";
+    garbage4.style.marginLeft = -(garbage4.getBoundingClientRect().width/2) + "px";
+    
 
-
+    
 
     window.addEventListener('scroll', function(){
-        function get_scroll_percentage() {
-            return ((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight
-            ) * 100;
-        }
-        console.log(get_scroll_percentage());
         let value = window.scrollY;
         sun.style.top = value * 0.15 + '%';
-        wave1.style.top =  (80 + value * -0.07)  + '%';
-        wave2.style.top = value * -0.04 + '%';
-        wave3.style.top = value * -0.02 + '%';
-        wave4.style.top = value * -0.01 + '%';
-        light.style.top = (30 + value * 0.1) + '%';
-        submarine.style.top = (value * 0.1) + '%';
+        // wave1.style.top =  (10 + value * -0.07)  + '%';
+        // wave2.style.top =  value * -0.04 + '%';
+        // wave3.style.top = (-25 + value * -0.02) + '%';
+        // wave4.style.top = (value * -0.01) + '%';
+        // light.style.top = (30 + value * 0.1) + '%';
+        // submarine.style.top = (value * 0.1) + '%';
         speech_wrapper.style.top = (30 + value * 0.1) + '%';
         ocean_background.style.top = (value * 0.01) + '%';
         ocean_background2.style.top = (24 + value * 0.01) + '%';
-        
-
         header.style.opacity = 1 - (value * 0.009);
         
         if(get_scroll_percentage() > 20){
             sun.style.opacity = "0";
-            submarine.style.opacity = "0.5";
-            light.style.opacity = "0.5";
+            // submarine.style.opacity = "0.5";
+            // light.style.opacity = "0.5";
             speech_wrapper.style.display = "none";
             scroll_animation_wrapper.style.display = "none";
         }
         else{
             sun.style.opacity = "1";
-            submarine.style.opacity = "1";
-            light.style.opacity = "0";
+            // submarine.style.opacity = "1";
+            // light.style.opacity = "0";
             speech_wrapper.style.display = "block";
             scroll_animation_wrapper.style.display = "block";}
 
-        submarine_top = submarine.style.top;
+        // submarine_top = submarine.style.top;
 
-        if( scrollY - 3000 > 0){
-            light.style.opacity = 0.5 - (scrollY - 3000) * 0.001;
-            submarine.style.opacity = 0.5 - (scrollY - 3000) * 0.001;
-            submarine.style.display = "block";
-            light.style.display = "block";
+        // // if( scrollY - 3000 > 0){
+        // //     // light.style.opacity = 0.5 - (scrollY - 3000) * 0.001;
+        // //     // submarine.style.opacity = 0.5 - (scrollY - 3000) * 0.001;
+        // //     // submarine.style.display = "block";
+        // //     // light.style.display = "block";
             
-        }
+        // // }
 
-        if(scrollY > 4400){
-            submarine.style.display = "none";
-            light.style.display = "none";
-            document.querySelector('#drinking-warning > h1').style.opacity = "1";
-            document.querySelector('#drinking-warning > p').style.opacity = "1";
-            document.querySelector('#drinking-warning').style.bottom = "13%";
-        }
+        // if(get_scroll_percentage() > 80){
+        //     document.querySelector('#drinking-warning > h1').style.opacity = "1";
+        //     document.querySelector('#drinking-warning > p').style.opacity = "1";
+        //     document.querySelector('#drinking-warning').style.bottom = "13%";
+        // }
 
-        else{
-            document.querySelector('#drinking-warning > h1').style.opacity = "0";
-            document.querySelector('#drinking-warning > p').style.opacity = "0";
-            document.querySelector('#drinking-warning').style.bottom = "10%";
-        }
+        // else{
+        //     document.querySelector('#drinking-warning > h1').style.opacity = "0";
+        //     document.querySelector('#drinking-warning > p').style.opacity = "0";
+        //     document.querySelector('#drinking-warning').style.bottom = "10%";
+        // }
 
-        if(scrollY > 4900){
-            document.querySelector('#animal-warning > h1').style.opacity = "1";
-            document.querySelector('#animal-warning > p').style.opacity = "1";
-            document.querySelector('#animal-warning').style.bottom = "13%";
-        }
+        // // if(scrollY > 4900){
+        // //     document.querySelector('#animal-warning > h1').style.opacity = "1";
+        // //     document.querySelector('#animal-warning > p').style.opacity = "1";
+        // //     document.querySelector('#animal-warning').style.bottom = "13%";
+        // // }
 
-        else{
-            document.querySelector('#animal-warning > h1').style.opacity = "0";
-            document.querySelector('#animal-warning > p').style.opacity = "0";
-            document.querySelector('#animal-warning').style.bottom = "10%";
-        }
+        // // else{
+        // //     document.querySelector('#animal-warning > h1').style.opacity = "0";
+        // //     document.querySelector('#animal-warning > p').style.opacity = "0";
+        // //     document.querySelector('#animal-warning').style.bottom = "10%";
+        // // }
 
-        if(scrollY > 5200){
-            document.querySelector('#earth-warning > h1').style.opacity = "1";
-            document.querySelector('#earth-warning > p').style.opacity = "1";
-            document.querySelector('#earth-warning').style.bottom = "13%";
-        }
+        // // if(scrollY > 5200){
+        // //     document.querySelector('#earth-warning > h1').style.opacity = "1";
+        // //     document.querySelector('#earth-warning > p').style.opacity = "1";
+        // //     document.querySelector('#earth-warning').style.bottom = "13%";
+        // // }
 
-        else{
-            document.querySelector('#earth-warning > h1').style.opacity = "0";
-            document.querySelector('#earth-warning > p').style.opacity = "0";
-            document.querySelector('#earth-warning').style.bottom = "10%";
-        }
+        // // else{
+        // //     document.querySelector('#earth-warning > h1').style.opacity = "0";
+        // //     document.querySelector('#earth-warning > p').style.opacity = "0";
+        // //     document.querySelector('#earth-warning').style.bottom = "10%";
+        // // }
             
         
     })
