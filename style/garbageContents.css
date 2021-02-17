@@ -1,0 +1,47 @@
+.contents_page-background {
+  position: relative;
+  top: 0;
+  z-index: 6;
+  width: 100%;
+}
+
+.contents_page-background #ocean-background {
+  opacity: 0.5;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.contents_page-background #ocean-background2 {
+  opacity: 0.2;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.contents_page-background .contents_page {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+}
+
+.contents_page-background .contents_page .garbage {
+  position: absolute;
+  left: 50%;
+}
+
+.contents_page-background .contents_page .garbage_contents {
+  width: 100%;
+  position: relative;
+}
+
+.contents_page-background .contents_page .garbage_contents #pollution1 {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+}
+
+.contents_page-background .contents_page .garbage_contents #garbage1 {
+  top: 0;
+  width: 80%;
+}

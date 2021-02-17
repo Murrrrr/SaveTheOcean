@@ -1,0 +1,50 @@
+.contents_page-background {
+    position: relative;
+    top: 0;
+    z-index: 6;
+    width: 100%;
+
+    #ocean-background {
+        opacity: 0.5;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+    }
+
+    #ocean-background2 {
+        opacity: 0.2;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+    }
+
+
+
+    .contents_page{
+        position:absolute;
+        top: 20%;
+        width: 100%;
+
+        .garbage {
+            position: absolute;
+            left: 50%;
+        }
+
+        .garbage_contents{
+            width: 100%;
+            position: relative;
+
+            #pollution1 {
+                position: absolute;
+                top: 0%;
+                width: 100%;
+            }
+
+            #garbage1{
+                top: 0;
+                width: 80%;
+            }
+            
+        }
+    }
+}

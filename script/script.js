@@ -15,7 +15,7 @@ const wave2 = document.querySelector("#wave2");
 const wave3 = document.querySelector("#wave3");
 const wave4 = document.querySelector("#wave4");
 const submarine = document.querySelector("#submarine");
-const header = document.querySelector('.intro_page > h1');
+const subject = document.querySelector('.intro_page > .subject');
 const light = document.querySelector('#light');
 const info_button = document.querySelectorAll('button');
 const contentsInfo = document.querySelectorAll('.contents-info-wrapper');
@@ -52,16 +52,15 @@ window.onload=function(){
     window.addEventListener('scroll', function(){
         let value = window.scrollY;
         sun.style.top = value * 0.15 + '%';
-        wave1.style.top =  (0 + value * -0.5)  + '%';
-        wave2.style.top =  (-8 + value * -0.04) + '%';
-        wave3.style.top = (-16 + value * -0.03) + '%';
-        wave4.style.top = (-24 + value * -0.02) + '%';
+        wave1.style.top =  (0 + value * -0.07)  + '%';
+        wave2.style.top =  (-8 + value * -0.05) + '%';
+        wave3.style.top = (-16 + value * -0.04) + '%';
+        wave4.style.top = (-24 + value * -0.03) + '%';
         // light.style.top = (30 + value * 0.1) + '%';
-        submarine.style.top = (30 + value * 0.15) + '%';
-        speech_wrapper.style.top = (30 + value * 0.1) + '%';
+        submarine.style.top = (40 + value * 0.13) + '%';
         ocean_background.style.top = (value * 0.01) + '%';
         ocean_background2.style.top = (24 + value * 0.01) + '%';
-        header.style.opacity = 1 - (value * 0.009);
+        subject.style.opacity = 1 - (value * 0.009);
         
         if(get_scroll_percentage() > 20){
             sun.style.opacity = "0";
@@ -70,12 +69,15 @@ window.onload=function(){
             speech_wrapper.style.display = "none";
             scroll_animation_wrapper.style.display = "none";
         }
+
         else{
             sun.style.opacity = "1";
             // submarine.style.opacity = "1";
             // light.style.opacity = "0";
-            speech_wrapper.style.display = "block";
-            scroll_animation_wrapper.style.display = "block";}
+            scroll_animation_wrapper.style.display = "block";
+        }
+
+        console.log(scrollY);
 
         // submarine_top = submarine.style.top;
 
