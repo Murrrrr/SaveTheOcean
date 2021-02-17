@@ -1,0 +1,39 @@
+.animal-contents {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.animal-contents #garbage3 {
+  top: 10%;
+  width: 70%;
+}
+
+.animal-contents #pollution3 {
+  width: 100%;
+}
+
+.animal-contents #turtle {
+  position: absolute;
+  width: 20%;
+  top: 20%;
+  left: 3%;
+  opacity: 0.7;
+  transform: rotate(0deg);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.animal-contents button {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 10px solid #ff5151;
+  background-color: transparent;
+  z-index: 9;
+}

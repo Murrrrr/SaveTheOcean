@@ -23,6 +23,7 @@ const ocean_background = document.querySelector('#ocean-background');
 const ocean_background2 = document.querySelector('#ocean-background2');
 const garbage1 = document.querySelector('#garbage1');
 const garbage2 = document.querySelector('#garbage2');
+const garbage3 = document.querySelector('#garbage3');
 const garbage4 = document.querySelector('#garbage4');
 const waterDrop = document.querySelector('#waterdrop');
 const speech_wrapper = document.querySelector('.speech-bubble-wrapper');
@@ -41,8 +42,8 @@ window.onload=function(){
     arrow.style.marginLeft = -(arrow.getBoundingClientRect().width/2) + "px";
     arrow2.style.marginLeft = -(arrow2.getBoundingClientRect().width/2) + "px";
     submarine.style.marginLeft = -(submarine.getBoundingClientRect().width/2) + "px";
-    garbage2.style.marginLeft = -(garbage2.getBoundingClientRect().width/2) + "px";
     garbage1.style.marginLeft = -(garbage1.getBoundingClientRect().width/2) + "px";
+    garbage2.style.marginLeft = -(garbage2.getBoundingClientRect().width/2) + "px";
     garbage3.style.marginLeft = -(garbage3.getBoundingClientRect().width/2) + "px";
     garbage4.style.marginLeft = -(garbage4.getBoundingClientRect().width/2) + "px";
     
