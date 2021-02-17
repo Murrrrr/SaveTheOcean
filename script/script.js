@@ -45,6 +45,11 @@ window.onload=function(){
 
 
     window.addEventListener('scroll', function(){
+        function get_scroll_percentage() {
+            return ((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight
+            ) * 100;
+        }
+        console.log(get_scroll_percentage());
         let value = window.scrollY;
         sun.style.top = value * 0.15 + '%';
         wave1.style.top =  (80 + value * -0.07)  + '%';
@@ -56,14 +61,11 @@ window.onload=function(){
         speech_wrapper.style.top = (30 + value * 0.1) + '%';
         ocean_background.style.top = (value * 0.01) + '%';
         ocean_background2.style.top = (24 + value * 0.01) + '%';
-        garbage1.style.top = (150 + value * -0.09) + "%";
-        garbage2.style.top = (150 + value * -0.09) + "%";
-        garbage4.style.top = (250 + value * -0.09) + "%";
         
 
         header.style.opacity = 1 - (value * 0.009);
         
-        if(get_scroll_percentage() > 12){
+        if(get_scroll_percentage() > 20){
             sun.style.opacity = "0";
             submarine.style.opacity = "0.5";
             light.style.opacity = "0.5";
