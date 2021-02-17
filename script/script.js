@@ -44,32 +44,35 @@ window.onload=function(){
 
 
     window.addEventListener('scroll', function(){
+        console.log(window);
         let value = window.scrollY;
-        sun.style.top = value * 0.5 + 'px';
-        wave1.style.top =  (550 + value * -0.6)  + 'px';
-        wave2.style.top = value * -0.4 + 'px';
-        wave3.style.top = value * -0.2 + 'px';
-        wave4.style.top = value * 0.01 + 'px';
-        light.style.top = (35 + value * 0.14) + '%';
-        submarine.style.top = (value * 0.14) + '%';
-        speech_wrapper.style.top = (value * 0.14) + '%';
+        sun.style.top = value * 0.15 + '%';
+        wave1.style.top =  (80 + value * -0.07)  + '%';
+        wave2.style.top = value * -0.04 + '%';
+        wave3.style.top = value * -0.02 + '%';
+        wave4.style.top = value * -0.01 + '%';
+        light.style.top = (30 + value * 0.1) + '%';
+        submarine.style.top = (value * 0.1) + '%';
+        speech_wrapper.style.top = (30 + value * 0.1) + '%';
         ocean_background.style.top = (value * 0.01) + '%';
         ocean_background2.style.top = (24 + value * 0.01) + '%';
-        garbage1.style.top = (800 + value * -0.5) + "px";
-        garbage2.style.top = (800 + value * -0.5) + "px";
-        garbage4.style.top = (1000 + value * -0.5) + "px";
-        speech_wrapper.style.top = (37+ value * 0.14) + "%";
+        garbage1.style.top = (150 + value * -0.09) + "%";
+        garbage2.style.top = (150 + value * -0.09) + "%";
+        garbage4.style.top = (250 + value * -0.09) + "%";
+        
 
         header.style.opacity = 1 - (value * 0.009);
         console.log(scrollY);
         
         if(scrollY > 300){
+            sun.style.opacity = "0";
             submarine.style.opacity = "0.5";
             light.style.opacity = "0.5";
             speech_wrapper.style.display = "none";
             scroll_animation_wrapper.style.display = "none";
         }
         else{
+            sun.style.opacity = "1";
             submarine.style.opacity = "1";
             light.style.opacity = "0";
             speech_wrapper.style.display = "block";

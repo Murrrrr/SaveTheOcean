@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Libre Franklin', sans-serif;
 }
 
@@ -34,8 +35,20 @@ body {
   width: 3%;
   position: fixed;
   left: 50%;
-  animation: arrow1Animation 1.5s infinite normal ease-in-out;
+  -webkit-animation: arrow1Animation 1.5s infinite normal ease-in-out;
+          animation: arrow1Animation 1.5s infinite normal ease-in-out;
   z-index: 9;
+}
+
+@-webkit-keyframes arrow1Animation {
+  from {
+    bottom: 7%;
+    opacity: 1;
+  }
+  to {
+    bottom: 2%;
+    opacity: 0;
+  }
 }
 
 @keyframes arrow1Animation {
@@ -54,8 +67,20 @@ body {
   width: 3%;
   position: fixed;
   left: 50%;
-  animation: arrow2Animation 1.5s infinite normal ease-in-out;
+  -webkit-animation: arrow2Animation 1.5s infinite normal ease-in-out;
+          animation: arrow2Animation 1.5s infinite normal ease-in-out;
   z-index: 9;
+}
+
+@-webkit-keyframes arrow2Animation {
+  from {
+    bottom: 10%;
+    opacity: 0;
+  }
+  to {
+    bottom: 7%;
+    opacity: 1;
+  }
 }
 
 @keyframes arrow2Animation {
@@ -96,7 +121,7 @@ body {
 .intro_page .speech-bubble-wrapper {
   z-index: 3;
   position: absolute;
-  top: 40%;
+  top: 30%;
   right: 20%;
   display: inline-block;
   width: 15%;
@@ -129,15 +154,25 @@ body {
   z-index: 3;
   width: 30%;
   opacity: 1;
-  animation: submarine_floating 2s infinite alternate ease-in-out;
+  -webkit-animation: submarine_floating 2s infinite alternate ease-in-out;
+          animation: submarine_floating 2s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes submarine_floating {
+  from {
+    margin-top: 0%;
+  }
+  to {
+    margin-top: 3%;
+  }
 }
 
 @keyframes submarine_floating {
   from {
-    margin-top: 0px;
+    margin-top: 0%;
   }
   to {
-    margin-top: 50px;
+    margin-top: 3%;
   }
 }
 
@@ -147,7 +182,17 @@ body {
   z-index: 3;
   left: 10%;
   width: 30%;
-  animation: light_floating 2s infinite alternate ease-in-out;
+  -webkit-animation: light_floating 2s infinite alternate ease-in-out;
+          animation: light_floating 2s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes light_floating {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 3%;
+  }
 }
 
 @keyframes light_floating {
@@ -155,7 +200,7 @@ body {
     margin-top: 0px;
   }
   to {
-    margin-top: 50px;
+    margin-top: 3%;
   }
 }
 
@@ -169,13 +214,14 @@ body {
 .intro_page .wave-container img {
   position: absolute;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   pointer-events: none;
 }
 
 .intro_page .wave-container #wave1 {
   z-index: 4;
-  top: 550px;
+  top: 80%;
 }
 
 .intro_page .wave-container #wave2 {
@@ -192,10 +238,10 @@ body {
 
 .contents_page {
   position: relative;
-  top: 600px;
+  top: 0;
   z-index: 6;
   width: 100%;
-  height: 3000px;
+  height: 350%;
 }
 
 .contents_page #introBubble {
@@ -223,7 +269,9 @@ body {
 
 .contents_page .contents-info-wrapper {
   padding: 1rem;
-  width: 500px;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
@@ -236,7 +284,7 @@ body {
 }
 
 .contents_page .garbage-contents #garbage1 {
-  top: 150px;
+  top: 130%;
   position: relative;
   width: 75%;
   margin: 0 auto;
@@ -244,7 +292,7 @@ body {
 }
 
 .contents_page .garbage-contents #garbage3 {
-  top: 150px;
+  top: 130%;
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -254,7 +302,7 @@ body {
 .contents_page .garbage-contents #pollution {
   position: absolute;
   width: 100%;
-  top: 300px;
+  top: 260%;
   left: 0;
 }
 
@@ -326,8 +374,10 @@ body {
   left: 3%;
   opacity: 1;
   transform: rotate(0deg);
+  -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  filter: FlipH;
+  -webkit-filter: FlipH;
+          filter: FlipH;
   -ms-filter: "FlipH";
 }
 
@@ -395,7 +445,8 @@ body {
   width: 20%;
   top: 0%;
   right: 5%;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   z-index: 1;
 }
 
@@ -404,7 +455,8 @@ body {
   position: absolute;
   width: 90%;
   display: block;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .contents_page .nuclear-contents button {
@@ -485,6 +537,7 @@ body {
   width: 10%;
   display: block;
   margin: 0 auto;
+  -webkit-transition: all 0.8s ease-in-out;
   transition: all 0.8s ease-in-out;
 }
 
@@ -501,8 +554,12 @@ body {
 
 .final-info-section .info-container .drinking-water {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -510,21 +567,27 @@ body {
   position: relative;
   left: 21%;
   width: 50%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .final-info-section .info-container .drinking-water #cup:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .final-info-section .info-container .drinking-water .warning-wrapper {
   position: relative;
   width: 40%;
   left: 20%;
+  -webkit-transition: bottom 1s;
   transition: bottom 1s;
 }
 
 .final-info-section .info-container .drinking-water .warning-wrapper h1 {
+  -webkit-transition: opacity 1s;
   transition: opacity 1s;
   padding: 1rem 1rem 1rem 1rem;
   text-transform: uppercase;
@@ -535,6 +598,7 @@ body {
 }
 
 .final-info-section .info-container .drinking-water .warning-wrapper p {
+  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
   padding: 0 1rem;
   width: 80%;
@@ -543,24 +607,35 @@ body {
 }
 
 .final-info-section .info-container .death-animals {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   width: 100%;
 }
 
 .final-info-section .info-container .death-animals img {
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   text-align: right;
   width: 50%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .final-info-section .info-container .death-animals img:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .final-info-section .info-container .death-animals h1 {
+  -webkit-transition: opacity 1s;
   transition: opacity 1s;
   padding: 1rem 1rem 1rem 1rem;
   text-transform: uppercase;
@@ -571,6 +646,7 @@ body {
 }
 
 .final-info-section .info-container .death-animals p {
+  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
   padding: 0 1rem;
   width: 80%;
@@ -579,31 +655,44 @@ body {
 }
 
 .final-info-section .info-container .protect-earth {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   width: 100%;
 }
 
 .final-info-section .info-container .protect-earth img {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   text-align: right;
   width: 40%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .final-info-section .info-container .protect-earth img:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .final-info-section .info-container .protect-earth #earth-warning {
   position: relative;
   left: 10%;
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   width: 60%;
 }
 
 .final-info-section .info-container .protect-earth #earth-warning h1 {
+  -webkit-transition: opacity 1s;
   transition: opacity 1s;
   padding: 1rem 1rem 1rem 1rem;
   text-transform: uppercase;
@@ -614,6 +703,7 @@ body {
 }
 
 .final-info-section .info-container .protect-earth #earth-warning p {
+  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
   padding: 0 1rem;
   width: 80%;
