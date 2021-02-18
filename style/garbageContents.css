@@ -55,7 +55,8 @@
 }
 
 .contents_page-background .contents_page .garbage_contents #garbage2 {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   width: 100%;
   top: 15%;
 }
@@ -77,6 +78,8 @@
   padding: 1rem;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   float: right;
   position: relative;

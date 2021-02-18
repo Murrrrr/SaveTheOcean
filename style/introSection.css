@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Libre Franklin', sans-serif;
 }
 
@@ -42,8 +43,20 @@ body {
   width: 3%;
   position: fixed;
   left: 50%;
-  animation: arrow1Animation 1.5s infinite normal ease-in-out;
+  -webkit-animation: arrow1Animation 1.5s infinite normal ease-in-out;
+          animation: arrow1Animation 1.5s infinite normal ease-in-out;
   z-index: 9;
+}
+
+@-webkit-keyframes arrow1Animation {
+  from {
+    bottom: 7%;
+    opacity: 1;
+  }
+  to {
+    bottom: 2%;
+    opacity: 0;
+  }
 }
 
 @keyframes arrow1Animation {
@@ -62,8 +75,20 @@ body {
   width: 3%;
   position: fixed;
   left: 50%;
-  animation: arrow2Animation 1.5s infinite normal ease-in-out;
+  -webkit-animation: arrow2Animation 1.5s infinite normal ease-in-out;
+          animation: arrow2Animation 1.5s infinite normal ease-in-out;
   z-index: 9;
+}
+
+@-webkit-keyframes arrow2Animation {
+  from {
+    bottom: 10%;
+    opacity: 0;
+  }
+  to {
+    bottom: 7%;
+    opacity: 1;
+  }
 }
 
 @keyframes arrow2Animation {
@@ -87,13 +112,32 @@ body {
 .intro_page #submarine {
   top: 40%;
   left: 50%;
-  position: absolute;
+  position: fixed;
   display: block;
   margin: 0 auto;
   z-index: 5;
   width: 30%;
   opacity: 1;
-  animation: submarine_floating 2s infinite alternate ease-in-out;
+  -webkit-animation: submarine_floating 2s infinite alternate ease-in-out;
+          animation: submarine_floating 2s infinite alternate ease-in-out;
+}
+
+.intro_page #light {
+  opacity: 0;
+  width: 40%;
+  position: fixed;
+  top: 35%;
+  -webkit-animation: submarine_floating 2s infinite alternate ease-in-out;
+          animation: submarine_floating 2s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes submarine_floating {
+  from {
+    margin-top: 0%;
+  }
+  to {
+    margin-top: 3%;
+  }
 }
 
 @keyframes submarine_floating {

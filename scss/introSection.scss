@@ -96,12 +96,20 @@ body {
     #submarine {
         top: 40%;
         left: 50%;
-        position: absolute;
+        position: fixed;
         display: block;
         margin: 0 auto;
         z-index: 5;
         width: 30%;
         opacity: 1;
+        animation: submarine_floating 2s infinite alternate ease-in-out;
+    }
+
+    #light{
+        opacity: 0;
+        width: 40%;
+        position: fixed;
+        top: 35%;
         animation: submarine_floating 2s infinite alternate ease-in-out;
     }
 

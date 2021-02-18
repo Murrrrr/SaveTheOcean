@@ -60,21 +60,20 @@ window.onload=function(){
         wave3.style.top = (-16 + value * -0.04) + '%';
         wave4.style.top = (-24 + value * -0.03) + '%';
         // light.style.top = (30 + value * 0.1) + '%';
-        submarine.style.top = (40 + value * 0.13) + '%';
+        
         subject.style.opacity = 1 - (value * 0.009);
-        garbage1.style.top =  (50 + value * -0.07) + "%"; 
-        garbage2.style.top = (50 + value * -0.03) + "%"; 
-        garbage3.style.top = (50 + value * -0.03) + "%"; 
-        garbage4.style.top = (50 + value * -0.03) + "%"; 
-        garbage5.style.top = (70 + value * -0.03) + "%"; 
-        ocean_background.style.top = (value * -0.03) + "%";
-        ocean_background2.style.top = (value * -0.03) + "%";
+        garbage1.style.top =  (100 + value * -0.07) + "%"; 
+        garbage2.style.top = (120 + value * -0.05) + "%"; 
+        garbage3.style.top = (200 + value * -0.05) + "%"; 
+        garbage4.style.top = (200 + value * -0.05) + "%"; 
+        garbage5.style.top = (200 + value * -0.05) + "%"; 
+        ocean_background.style.top = (value * -0.01) + "%";
+        ocean_background2.style.top = (value * -0.01) + "%";
         
         if(get_scroll_percentage() > 20){
             sun.style.opacity = "0";
             // submarine.style.opacity = "0.5";
             // light.style.opacity = "0.5";
-            speech_wrapper.style.display = "none";
             scroll_animation_wrapper.style.display = "none";
         }
 
@@ -89,50 +88,23 @@ window.onload=function(){
 
         submarine_top = submarine.style.top;
 
-        if( scrollY - 3000 > 0){
-            // light.style.opacity = 0.5 - (scrollY - 3000) * 0.001;
-            submarine.style.opacity = 0.5 - (scrollY - 3000) * 0.001;
+        if( scrollY > 300){
+            light.style.opacity = 0.5;
+            submarine.style.opacity = 0.5;
+        }
+
+        else{
+            submarine.style.opacity = 1;
+            light.style.opacity = 0;
+        }
+
+        if( scrollY - 4400 > 0){
+            light.style.opacity = 0.5 - (scrollY - 4400) * 0.001;
+            submarine.style.opacity = 0.5 - (scrollY - 4400) * 0.001;
             submarine.style.display = "block";
-            // light.style.display = "block";
+            light.style.display = "block";
             
         }
-
-        if(get_scroll_percentage() > 80){
-            document.querySelector('#drinking-warning > h1').style.opacity = "1";
-            document.querySelector('#drinking-warning > p').style.opacity = "1";
-            document.querySelector('#drinking-warning').style.bottom = "13%";
-        }
-
-        else{
-            document.querySelector('#drinking-warning > h1').style.opacity = "0";
-            document.querySelector('#drinking-warning > p').style.opacity = "0";
-            document.querySelector('#drinking-warning').style.bottom = "10%";
-        }
-
-        if(scrollY > 4900){
-            document.querySelector('#animal-warning > h1').style.opacity = "1";
-            document.querySelector('#animal-warning > p').style.opacity = "1";
-            document.querySelector('#animal-warning').style.bottom = "13%";
-        }
-
-        else{
-            document.querySelector('#animal-warning > h1').style.opacity = "0";
-            document.querySelector('#animal-warning > p').style.opacity = "0";
-            document.querySelector('#animal-warning').style.bottom = "10%";
-        }
-
-        if(scrollY > 5200){
-            document.querySelector('#earth-warning > h1').style.opacity = "1";
-            document.querySelector('#earth-warning > p').style.opacity = "1";
-            document.querySelector('#earth-warning').style.bottom = "13%";
-        }
-
-        else{
-            document.querySelector('#earth-warning > h1').style.opacity = "0";
-            document.querySelector('#earth-warning > p').style.opacity = "0";
-            document.querySelector('#earth-warning').style.bottom = "10%";
-        }
-            
         
     })
 
@@ -167,4 +139,9 @@ window.onload=function(){
             waterDrop.style.opacity = "1";
         },1000)
     }
+}
+
+if(window.innerWidth < 1280){
+    document.body.style.display = "none";
+    alert("이 페이지는 PC 환경에 최적화 되있습니다. PC로 접속해주십시오")
 }
