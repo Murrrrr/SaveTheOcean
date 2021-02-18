@@ -1,0 +1,149 @@
+.final-section{
+    background-color: #fff;
+    top: 150%;
+    width: 100%;
+    position:relative;
+
+    #windingWave{
+        width: 100%;
+    }
+
+    #waterdrop {
+        position: relative;
+        width: 10%;
+        display: block;
+        margin: 0 auto;
+        transition: all 0.8s ease-in-out;
+    }
+
+    .info-container {
+        width: 80%;
+        margin: 0 auto;
+
+        .drinking-water {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            #cup {
+                position: relative;
+                left: 21%;
+                width: 50%;
+                transition: transform 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .warning-wrapper {
+                position: relative;
+                width: 40%;
+                left: 20%;
+                transition: bottom 1s;
+
+                h1 {
+                    transition: opacity 1s;
+                    padding: 1rem 1rem 1rem 1rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    opacity: 1;
+                }
+
+                p {
+                    transition: opacity 0.5s;
+
+                    padding: 0 1rem;
+                    width: 80%;
+                    opacity: 1;
+                    line-height: 1.5rem;
+                }
+            }
+
+        }
+
+        .death-animals {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+
+            img {
+                order: 2;
+                text-align: right;
+                width: 50%;
+                transition: transform 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            h1 {
+                transition: opacity 1s;
+                padding: 1rem 1rem 1rem 1rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 1.5rem;
+                font-weight: bold;
+                opacity: 1;
+            }
+
+            p {
+                transition: opacity 0.5s;
+
+                padding: 0 1rem;
+                width: 80%;
+                opacity: 1;
+                line-height: 1.5rem;
+            }
+        }
+
+        .protect-earth {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+
+            img {
+                order: 1;
+                text-align: right;
+                width: 40%;
+                transition: transform 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            #earth-warning {
+                position: relative;
+                left: 10%;
+                order: 2;
+                width: 60%;
+
+                h1 {
+                    transition: opacity 1s;
+                    padding: 1rem 1rem 1rem 1rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    opacity: 1;
+                }
+
+                p {
+                    transition: opacity 0.5s;
+                    padding: 0 1rem;
+                    width: 80%;
+                    opacity: 1;
+                    line-height: 1.5rem;
+                }
+            }
+
+        }
+    }
+}

@@ -47,8 +47,9 @@
         display:flex;
         position: absolute;
         top: 60%;
-        width: 40%;
+        width: 35%;
         left: 15%;
+        z-index: 7;
 
         #animal-contents-info {
             width: 50%;

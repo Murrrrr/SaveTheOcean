@@ -1,19 +1,25 @@
 .contents_page-background {
   position: relative;
   top: 30%;
-  z-index: 6;
   width: 100%;
 }
 
 .contents_page-background #ocean-background {
-  opacity: 0.5;
+  opacity: 0.8;
   width: 100%;
   position: relative;
   z-index: 0;
 }
 
 .contents_page-background #ocean-background2 {
-  opacity: 0.2;
+  opacity: 0.4;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.contents_page-background #ocean-background3 {
+  opacity: 0.8;
   width: 100%;
   position: relative;
   z-index: 0;
@@ -29,6 +35,7 @@
 .contents_page-background .contents_page .garbage {
   position: absolute;
   left: 50%;
+  z-index: 7;
 }
 
 .contents_page-background .contents_page .garbage_contents {
@@ -76,7 +83,7 @@
   z-index: 10;
   top: 35%;
   right: 5%;
-  width: 40%;
+  width: 35%;
 }
 
 .contents_page-background .contents_page .garbage_contents #garbage_contents-wrapper .garbage_contents-info {

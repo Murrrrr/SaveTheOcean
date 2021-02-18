@@ -9,6 +9,11 @@
   opacity: 0.4;
 }
 
+.nuclear-contents #garbage5 {
+  width: 100%;
+  opacity: 0.4;
+}
+
 .nuclear-contents #pollution3 {
   position: absolute;
   width: 100%;
@@ -17,8 +22,8 @@
 .nuclear-contents button {
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  right: 20%;
+  top: 13%;
+  right: 15%;
   width: 50px;
   height: 50px;
   border-radius: 50px;
@@ -31,10 +36,10 @@
   transform: rotate(30deg);
   opacity: 0.7;
   width: 30%;
-  float: right;
-  position: relative;
-  top: 25%;
-  right: 0%;
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  z-index: 9;
 }
 
 .nuclear-contents #nuclear_contents-wrapper {
@@ -43,9 +48,10 @@
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   position: absolute;
-  top: 35%;
-  width: 40%;
-  left: 15%;
+  top: 17%;
+  width: 35%;
+  right: 15%;
+  z-index: 9;
 }
 
 .nuclear-contents #nuclear_contents-wrapper #nuclear_contents-info {

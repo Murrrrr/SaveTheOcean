@@ -25,6 +25,7 @@ const garbage1 = document.querySelector('#garbage1');
 const garbage2 = document.querySelector('#garbage2');
 const garbage3 = document.querySelector('#garbage3');
 const garbage4 = document.querySelector('#garbage4');
+const garbage5 = document.querySelector('#garbage5');
 const waterDrop = document.querySelector('#waterdrop');
 const speech_wrapper = document.querySelector('.speech-bubble-wrapper');
 const garbage_contents_image = document.querySelector('.garbage-contents-image > img');
@@ -46,6 +47,7 @@ window.onload=function(){
     garbage2.style.marginLeft = -(garbage2.getBoundingClientRect().width/2) + "px";
     garbage3.style.marginLeft = -(garbage3.getBoundingClientRect().width/2) + "px";
     garbage4.style.marginLeft = -(garbage4.getBoundingClientRect().width/2) + "px";
+    garbage5.style.marginLeft = -(garbage5.getBoundingClientRect().width/2) + "px";
     
 
     
@@ -59,9 +61,14 @@ window.onload=function(){
         wave4.style.top = (-24 + value * -0.03) + '%';
         // light.style.top = (30 + value * 0.1) + '%';
         submarine.style.top = (40 + value * 0.13) + '%';
-        ocean_background.style.top = (value * 0.01) + '%';
-        ocean_background2.style.top = (24 + value * 0.01) + '%';
         subject.style.opacity = 1 - (value * 0.009);
+        garbage1.style.top =  (50 + value * -0.07) + "%"; 
+        garbage2.style.top = (50 + value * -0.03) + "%"; 
+        garbage3.style.top = (50 + value * -0.03) + "%"; 
+        garbage4.style.top = (50 + value * -0.03) + "%"; 
+        garbage5.style.top = (70 + value * -0.03) + "%"; 
+        ocean_background.style.top = (value * -0.03) + "%";
+        ocean_background2.style.top = (value * -0.03) + "%";
         
         if(get_scroll_percentage() > 20){
             sun.style.opacity = "0";
@@ -80,51 +87,51 @@ window.onload=function(){
 
         console.log(scrollY);
 
-        // submarine_top = submarine.style.top;
+        submarine_top = submarine.style.top;
 
-        // // if( scrollY - 3000 > 0){
-        // //     // light.style.opacity = 0.5 - (scrollY - 3000) * 0.001;
-        // //     // submarine.style.opacity = 0.5 - (scrollY - 3000) * 0.001;
-        // //     // submarine.style.display = "block";
-        // //     // light.style.display = "block";
+        if( scrollY - 3000 > 0){
+            // light.style.opacity = 0.5 - (scrollY - 3000) * 0.001;
+            submarine.style.opacity = 0.5 - (scrollY - 3000) * 0.001;
+            submarine.style.display = "block";
+            // light.style.display = "block";
             
-        // // }
+        }
 
-        // if(get_scroll_percentage() > 80){
-        //     document.querySelector('#drinking-warning > h1').style.opacity = "1";
-        //     document.querySelector('#drinking-warning > p').style.opacity = "1";
-        //     document.querySelector('#drinking-warning').style.bottom = "13%";
-        // }
+        if(get_scroll_percentage() > 80){
+            document.querySelector('#drinking-warning > h1').style.opacity = "1";
+            document.querySelector('#drinking-warning > p').style.opacity = "1";
+            document.querySelector('#drinking-warning').style.bottom = "13%";
+        }
 
-        // else{
-        //     document.querySelector('#drinking-warning > h1').style.opacity = "0";
-        //     document.querySelector('#drinking-warning > p').style.opacity = "0";
-        //     document.querySelector('#drinking-warning').style.bottom = "10%";
-        // }
+        else{
+            document.querySelector('#drinking-warning > h1').style.opacity = "0";
+            document.querySelector('#drinking-warning > p').style.opacity = "0";
+            document.querySelector('#drinking-warning').style.bottom = "10%";
+        }
 
-        // // if(scrollY > 4900){
-        // //     document.querySelector('#animal-warning > h1').style.opacity = "1";
-        // //     document.querySelector('#animal-warning > p').style.opacity = "1";
-        // //     document.querySelector('#animal-warning').style.bottom = "13%";
-        // // }
+        if(scrollY > 4900){
+            document.querySelector('#animal-warning > h1').style.opacity = "1";
+            document.querySelector('#animal-warning > p').style.opacity = "1";
+            document.querySelector('#animal-warning').style.bottom = "13%";
+        }
 
-        // // else{
-        // //     document.querySelector('#animal-warning > h1').style.opacity = "0";
-        // //     document.querySelector('#animal-warning > p').style.opacity = "0";
-        // //     document.querySelector('#animal-warning').style.bottom = "10%";
-        // // }
+        else{
+            document.querySelector('#animal-warning > h1').style.opacity = "0";
+            document.querySelector('#animal-warning > p').style.opacity = "0";
+            document.querySelector('#animal-warning').style.bottom = "10%";
+        }
 
-        // // if(scrollY > 5200){
-        // //     document.querySelector('#earth-warning > h1').style.opacity = "1";
-        // //     document.querySelector('#earth-warning > p').style.opacity = "1";
-        // //     document.querySelector('#earth-warning').style.bottom = "13%";
-        // // }
+        if(scrollY > 5200){
+            document.querySelector('#earth-warning > h1').style.opacity = "1";
+            document.querySelector('#earth-warning > p').style.opacity = "1";
+            document.querySelector('#earth-warning').style.bottom = "13%";
+        }
 
-        // // else{
-        // //     document.querySelector('#earth-warning > h1').style.opacity = "0";
-        // //     document.querySelector('#earth-warning > p').style.opacity = "0";
-        // //     document.querySelector('#earth-warning').style.bottom = "10%";
-        // // }
+        else{
+            document.querySelector('#earth-warning > h1').style.opacity = "0";
+            document.querySelector('#earth-warning > p').style.opacity = "0";
+            document.querySelector('#earth-warning').style.bottom = "10%";
+        }
             
         
     })
