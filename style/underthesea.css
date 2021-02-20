@@ -28,7 +28,6 @@ html, body {
   left: 50%;
   top: 70%;
   z-index: 3;
-  filter: brightness(0.7);
   animation: submarine_floating 2s ease-in-out 2s infinite alternate;
 }
 

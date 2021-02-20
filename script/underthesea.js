@@ -39,6 +39,7 @@ window.onload = function(){
         bodyHeightPer = value / document.body.scrollHeight*100;
 
         if(bodyHeightPer > 2.6){
+            submarine.style.filter = "brightness(0.7)";
             submarine.style.opacity = '0.8';
             light.style.opacity = '0.5';
         }
