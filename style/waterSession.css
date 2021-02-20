@@ -1,0 +1,67 @@
+@import url("../style/layout.css");
+.water_section {
+  position: relative;
+  height: 80vh;
+}
+
+.water_section #background3 {
+  top: 0;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+}
+
+.water_section #pollution3 {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  opacity: 0.5;
+}
+
+.water_section #garbage4 {
+  width: 80%;
+  margin: 0 auto;
+  transform: scaleX(-1);
+}
+
+.water_section #garbage5 {
+  display: block;
+  margin: 0 auto;
+  opacity: 0.5;
+  width: 90%;
+  position: relative;
+  z-index: 9;
+}
+
+.water_section .problem-wrapper {
+  top: 25%;
+  right: 10%;
+}
+
+.water_section #nuclear_pollution {
+  position: absolute;
+  transform: rotate(30deg);
+  top: 0%;
+  right: 10%;
+  width: 20%;
+}
+
+.water_section #garbage6 {
+  transform: rotate(180deg);
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  opacity: 0.5;
+  position: relative;
+  z-index: 9;
+}
+
+.water_section #garbage7 {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  opacity: 0.5;
+  position: relative;
+  z-index: 9;
+}

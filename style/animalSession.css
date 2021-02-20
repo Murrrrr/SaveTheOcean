@@ -1,0 +1,43 @@
+@import url("../style/layout.css");
+.animal_section {
+  position: relative;
+}
+
+.animal_section #background2 {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.animal_section #garbage3 {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.animal_section #pollution2 {
+  top: 0%;
+  position: absolute;
+  width: 100%;
+}
+
+.animal_section #turtle {
+  top: 0%;
+  position: absolute;
+  width: 20%;
+  transform: scaleX(-1);
+  filter: brightness(0.7);
+}
+
+.animal_section .problem-wrapper {
+  left: 10%;
+  top: 30%;
+}
+
+.animal_section .problem-wrapper button {
+  left: 0;
+}

@@ -1,0 +1,61 @@
+.section {
+  background-color: #006E87;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.section .problem-wrapper {
+  z-index: 10;
+  top: 20%;
+  right: 0%;
+  position: absolute;
+  width: 500px;
+  height: 300px;
+}
+
+.section .problem-wrapper button {
+  cursor: pointer;
+  position: absolute;
+  right: 10%;
+  top: 0;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 10px solid #ffff00;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.section .problem-wrapper .problem_info {
+  display: flex;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.5);
+  justify-content: space-between;
+}
+
+.section .problem-wrapper .problem_info .info {
+  padding: 1rem;
+  width: 50%;
+}
+
+.section .problem-wrapper .problem_info .info h1 {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.section .problem-wrapper .problem_info .info p {
+  padding: 0.5rem;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+.section .problem-wrapper .problem_info img {
+  padding: 1.5rem;
+  width: 50%;
+}

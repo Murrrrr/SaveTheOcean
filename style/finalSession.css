@@ -1,0 +1,116 @@
+.final_section .water_drop-section {
+  position: relative;
+}
+
+.final_section #winding_wave {
+  width: 100%;
+}
+
+.final_section #water_drop {
+  display: block;
+  position: absolute;
+  left: 45%;
+  top: 42%;
+  width: 10%;
+  animation: water_droping 1.5s ease-in-out infinite;
+}
+
+@keyframes water_droping {
+  from {
+    top: 42%;
+    opacity: 1;
+  }
+  to {
+    top: 45%;
+    opacity: 0;
+  }
+}
+
+.final_section #water-wrapper {
+  position: relative;
+  right: 3%;
+  display: block;
+  margin: 0 auto;
+}
+
+.final_section #water-wrapper #cup {
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+}
+
+.final_section #water-wrapper .subject {
+  opacity: 0;
+  position: absolute;
+  top: 37%;
+  right: 0%;
+  width: 35%;
+  transition: all 1s ease;
+}
+
+.final_section #water-wrapper .subject p {
+  margin-top: 0.8rem;
+  line-height: 1.5rem;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.85rem;
+}
+
+.final_section #animal-wrapper {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.final_section #animal-wrapper .subject {
+  position: relative;
+  left: 10%;
+  order: 1;
+  width: 30%;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.final_section #animal-wrapper .subject p {
+  margin-top: 0.8rem;
+  line-height: 1.5rem;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.85rem;
+}
+
+.final_section #animal-wrapper #animal {
+  order: 2;
+  width: 55%;
+}
+
+.final_section #earth-wrapper {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.final_section #earth-wrapper .subject {
+  right: 10%;
+  position: relative;
+  order: 2;
+  width: 30%;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.final_section #earth-wrapper .subject p {
+  margin-top: 0.8rem;
+  line-height: 1.5rem;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.85rem;
+}
+
+.final_section #earth-wrapper #earth {
+  position: relative;
+  left: 5%;
+  order: 1;
+  width: 35%;
+}

@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+.intro_section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #FFF9F5;
+
+    canvas{
+        position:absolute;
+        top: 5%;
+        left: 5%;
+    }
+
+    #submarine{
+        position: fixed;
+        width: 25%;
+        left: 50%;
+        top: 70%;
+        z-index: 3;
+        filter:brightness(0.7);
+        animation: submarine_floating 2s ease-in-out 2s infinite alternate;
+    }
+
+    @keyframes submarine_floating {
+        from{top: 70%};
+        to{top: 60%};
+        
+    }    
+
+    #light{
+        opacity: 0;
+        position: fixed;
+        width: 30%;
+        z-index: 3;
+        left: 28%;
+        top: 73%;
+        animation: light_floating 2s ease-in-out 2s infinite alternate;
+    }
+
+    @keyframes light_floating {
+        from{top: 73%};
+        to{top: 63%};
+        
+    }    
+
+    #seagull{
+        position:absolute;
+        top: 10%;
+        right: 10%;
+        transform: rotate(10deg);
+        width: 20%;
+    }
+
+    .subject{
+        text-align: center;
+        position:absolute;
+        top: 30%;
+        left: 50%;
+        z-index: 9;
+        
+        h1{
+            font-family: 'Noto Sans Gothic', sans-serif;
+            font-size: 3.75rem;
+        }
+
+        h2{
+            font-family: 'Libre Franklin', sans-serif;
+            margin-top: 0.625rem;
+        }
+    }
+
+    
+
+    .wave-container{
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        position:absolute;
+        overflow: hidden;
+
+        #wave1{
+            width: 100%;
+            position: absolute;
+            z-index: 5;
+            top: 80%;
+        }
+
+        #wave2{
+            width: 100%;
+            position: absolute;
+            z-index: 4;
+            top: 70%;
+        }
+
+        #wave3{
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            top: 60%;
+        }
+
+        #wave4{
+            width: 100%;
+            top: 50%;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+}
+
+.between{
+    position:absolute;
+    top: 80%;
+    width: 100%;
+    height: 50vh;
+    background-color: #006E87;
+}

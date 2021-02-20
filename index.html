@@ -4,153 +4,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style/introSection.css">
-    <link rel="stylesheet" href="style/garbageContents.css">
-    <link rel="stylesheet" href="style/animalContents.css">
-    <link rel="stylesheet" href="style/nuclearContents.css">
-    <link rel="stylesheet" href="style/finalSection.css">
+    <link rel="stylesheet" href="style/underthesea.css">
+    <link rel="stylesheet" href="style/plasticSession.css">
+    <link rel="stylesheet" href="style/animalSession.css">
+    <link rel="stylesheet" href="style/waterSession.css">
+    <link rel="stylesheet" href="style/finalSession.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap" rel="stylesheet">
+    <title>Under the Sea</title>
 </head>
-
 <body>
+    <div class="bodywrapper">
+        <section class="intro_section">
+            <canvas width="100" height="100"></canvas>
+            <img src="image/seagull.png" alt="seagull" id="seagull">
+            <div class="subject">
+                <h1>PLASTIC OCEAN</h1>
+                <h2>What can we find under the sea?</h2>
+            </div>
+            <img src="image/submarine.png" alt="submarine" id="submarine">
+            <img src="image/light.png" alt="light" id="light">
+            <div class="wave-container">
+                <img src="../image/wave1.png" alt="wave1" id="wave1">
+                <img src="../image/wave2.png" alt="wave2" id="wave2">
+                <img src="../image/wave3.png" alt="wave3" id="wave3">
+                <img src="../image/wave4.png" alt="wave4" id="wave4">
+            </div>
+        </section>
 
-    <section class="intro_page">
-        <div class="background"></div>
-        <canvas width="100" height="100" id="sun"></canvas>
-        <div class="subject">
-            <h1>deep down in the ocean</h1>
-            <h2>What can we find in the sea? Let's Check this out!</h2>    
+        <div class="between"></div>
+
+        <div class="main_contents-container">
+            <div class="plastic_section section">
+                <img src="image/background1.png" class="background" id="background1" alt="background1">
+                <img src="image/PlasticGarbage3.png" alt="garbage1" id="garbage1">
+                <img src="image/PlasticGarbage1.png" alt="garbage2" id="garbage2">
+                <img src="image/pollution.png" alt="pollution" id="pollution1">
+                <img src="image/pollution.png" alt="pollution" id="pollution1">
+                <div class="problem-wrapper">
+                    <button></button>
+                    <div class="problem_info" id="plastic_problem">
+                        <section class="info">
+                            <h1>Plastic Pollution</h1>
+                            <p>All over the world, 400 million tons of plastic are produced annually, 
+                                with about 8 million tons of plastic waste flowing into the sea.</p>
+                        </section>
+                        <img src="image/b5e0c92aa80b2d67bc0da593c5ddf18c.gif">
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="animal_section section">
+                <img src="image/background1.png" class="background" id="background2" alt="background2">
+                <img src="image/turtle.png" alt="turtle" id="turtle">
+                <img src="image/PlasticGarbage2.png" alt="garbage3" id="garbage3">
+                <img src="image/pollution.png" alt="pollution" id="pollution2">
+                <div class="problem-wrapper" id="animal_problem">
+                    <button></button>
+                    <div class="problem_info">
+                        <section class="info">
+                            <h1>Animals Damage</h1>
+                            <p>Marine animals are threatened with life by plastic bags, nets, etc. that people have thrown away.</p>
+                        </section>
+                        <img src="image/turtle-gif.gif" alt="turtle">
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="water_section section">
+                <img src="image/nuclear-pollution.png" alt="nuclear_pollution" id="nuclear_pollution">
+                <img src="image/PlasticGarbage3.png" alt="garbage4" id="garbage4">
+                <img src="image/PlasticGarbage4.png" alt="garbage5" id="garbage5">
+                <img src="image/PlasticGarbage1.png" alt="garbage6" id="garbage6">
+                <img src="image/PlasticGarbage2.png" alt="garbage7" id="garbage7">
+                <img src="image/pollution.png" alt="pollution" id="pollution3">
+                <img src="image/pollution.png" alt="pollution" id="pollution3">
+                <img src="image/pollution.png" alt="pollution" id="pollution3">
+                <div class="problem-wrapper" id="water_problem">
+                    <button></button>
+                    <div class="problem_info">
+                        <section class="info">
+                            <h1>Illegal Wastewater</h1>
+                            <p>Currently, it is right to discharge wastewater after treatment, but some factories still discharge it as it is, causing water pollution.</p>
+                        </section>
+                        <img src="image/tenor.gif" alt="turtle">
+                    </div>
+                </div>
+                
+            </div>
         </div>
-        
-        <img src="image/light.png" alt="light" id="light">
-        <img src="image/submarine.png" alt="submarine" id="submarine">   
-        
 
-        <img src="image/seagull.png" alt="seagull" id="seagull">
-        <div class="scroll-animation-wrapper">
-            <img src="image/arrow_black.png" alt="arrow" id="arrow">
-            <img src="image/arrow_black.png" alt="arrow" id="arrow2">
-        </div>
-        
-        
-        
+        <div class="final_section">
+            <div class="water_drop-section">
+                <img src="image/windingWave.png" alt="winding_wave" id="winding_wave">
+                <img src="image/waterdrop.png" alt="water_drop" id="water_drop">
+                <div class="subject-wrapper" id="water-wrapper">
+                    <img src="image/cup.png" alt="cup" id="cup">
+                
+                    <div class="subject">
+                        <h1>Save the Ocean</h1>
+                        <p>Eventually, the plastic waste we throw away comes back to us. Now it's time to reduce the use of plastic.</p>
+                    </div>
+                    
+                </div>
 
+                <div class="subject-wrapper" id="animal-wrapper">
+                    <div class="subject">
+                        <h1>Save the Animal</h1>
+                        <p>Eventually, the plastic waste we throw away comes back to us. Now it's time to reduce the use of plastic.</p>
+                    </div>
+                    <img src="image/deathAnimals.png" alt="animal" id="animal">
+                    
+                </div>
 
-        <div class="wave-container">
-            <img src="image/wave1.png" alt="wave1" id="wave1">
-            <img src="image/wave2.png" alt="wave2" id="wave2">
-            <img src="image/wave3.png" alt="wave3" id="wave3">
-            <img src="image/wave4.png" alt="wave4" id="wave4">
+                <div class="subject-wrapper" id="earth-wrapper">
+                    <div class="subject">
+                        <h1>Save the Earth</h1>
+                        <p>Saving the ocean is the same as saving the Earth. Save the Earth and create a better environment.</p>
+                    </div>
+                    <img src="image/earth.png" alt="earth" id="earth">
+                    
+                </div>
+            </div>
             
         </div>
-    </section>
-
-    <section class="loading_section">
         
-    </section>
-
-    <div class="contents_page-background">
-        <img src="image/background1.png" alt="ocean-background" id="ocean-background">
-        <img src="image/background3.png" alt="ocean-background2" id="ocean-background2">
-        <img src="image/background1.png" alt="ocean-background3" id="ocean-background3">
-
-        <section class="contents_page">
-            <article class="garbage_contents">
-                <img src="image/pollution.png" alt="pollution" id="pollution1">
-                <img src="image/pollution.png" alt="pollution" id="pollution1">
-                <img src="image/PlasticGarbage3.png" class="garbage" alt="garbage1" id="garbage1">
-                <img src="image/PlasticGarbage2.png" class="garbage" alt="garbage2" id="garbage2">
-                
-                <button></button>
-                <div class="contents-info-wrapper" id="garbage_contents-wrapper">
-                    <div class="garbage_contents-info">
-                        <h2>Plastic Pollution</h2>
-                        <p>All over the world, 400 million tons of plastic are produced annually, with about 8 million tons of plastic waste flowing into the sea.</p>             
-                    </div>
-                    <img src="image/b5e0c92aa80b2d67bc0da593c5ddf18c.gif">
-                </div> 
-                    
-            </article>
-
-            <article class="animal-contents">
-
-                <img src="image/PlasticGarbage1.png" class="garbage" alt="garbage3" id="garbage3">
-                <img src="image/turtle.png" id="turtle">
-                <img src="image/pollution.png" alt="pollution" id="pollution2">
-  
-                <button></button>
-      
-                <div class="contents-info-wrapper" id="animal-contents-wrapper">
-                    <div class="contents-info" id="animal-contents-info">
-                        <h2>Animals damage</h2>
-                        <p>Ocean animals suffer a lot of damage, such as mistaking marine waste for food or being caught in a net and unable to move.</p>
-                    </div>
-    
-                    <img src="image/turtle-gif.gif">
-                </div>
-    
-            </article>
-
-            <article class="nuclear-contents">
-                <img src="image/pollution.png" alt="pollution" id="pollution3">
-                <img src="image/pollution.png" alt="pollution" id="pollution3">
-                <img src="image/nuclear-pollution.png" id="nuclear_pollution">
-                <img src="image/PlasticGarbage4.png"  class="garbage" id="garbage4" alt="garbage4">
-                <img src="image/PlasticGarbage4.png"  class="garbage" id="garbage5" alt="garbage5">
-                <button></button>
-                
-                
-                
-                <div class="contents-info-wrapper" id="nuclear_contents-wrapper">
-                    <div class="contents-info" id="nuclear_contents-info">
-                        <h2>Illegal Wastewater</h2>
-                        <p>Currently, it is right to send wastewater out after treatment, but there are still places where wastewater is illegally dumped.</p>
-                    </div>
-                    <img src="image/tenor.gif" alt="wastewater">
-                    
-                </div>
-                
-            </article>
-        </section>
     </div>
-
-    
-    <div class="final-section">
-        <img src="image/windingWave.png" id="windingWave">
-        <img src="image/waterdrop.png" id="waterdrop">
-
-        <div class="info-container">
-            <div class="drinking-water">
-                <img src="image/cup.png" id="cup">
-                <div class="warning-wrapper" id="drinking-warning">
-                    <h1>Save the Ocean</h1>
-                    <p>Eventually, the trash we throw away comes back to us. Let's work together to create a cleaner sea.</p>
-                </div>
-            </div>
-    
-            <div class="death-animals">
-                <div class="warning-wrapper" id="animal-warning">
-                    <h1>Save the Animals</h1>
-                    <p>Animals are suffering from trash that people throw away. Let's create an environment where animals can live.</p>
-                </div>
-                <img src="image/deathAnimals.png" alt="deathAnimals">
-            </div>
-
-            <div class="protect-earth">
-                <img src="image/earth.png" alt="earth">
-                <div class="warning-wrapper" id="earth-warning">
-                    <h1>Save the Earth</h1>
-                    <p>Ocean pollution causes many problems on Earth. Please pay a lot of attention to ocean pollution so that we can make a better planet.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    </div>
-
+    <script src="script/underthesea.js"></script>
 </body>
-
-<script src="script/script.js"></script>
 </html>
