@@ -44,15 +44,16 @@
   position: absolute;
   top: 37%;
   right: 0%;
-  width: 35%;
-  transition: all 1s ease;
+  width: 30%;
+  transition: all 2s ease;
 }
 
 .final_section #water-wrapper .subject p {
   margin-top: 0.8rem;
   line-height: 1.5rem;
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .final_section #animal-wrapper {
@@ -69,14 +70,15 @@
   order: 1;
   width: 30%;
   opacity: 0;
-  transition: all 1.5s ease;
+  transition: all 2s ease;
 }
 
 .final_section #animal-wrapper .subject p {
   margin-top: 0.8rem;
   line-height: 1.5rem;
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .final_section #animal-wrapper #animal {
@@ -98,14 +100,15 @@
   order: 2;
   width: 30%;
   opacity: 0;
-  transition: all 1.5s ease;
+  transition: all 2s ease;
 }
 
 .final_section #earth-wrapper .subject p {
   margin-top: 0.8rem;
   line-height: 1.5rem;
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .final_section #earth-wrapper #earth {

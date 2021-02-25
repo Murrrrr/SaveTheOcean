@@ -24,6 +24,9 @@ const background = document.querySelectorAll('.background');
 const waterSubject = document.querySelector('#water-wrapper > .subject');
 const animalSubject = document.querySelector('#animal-wrapper > .subject');
 const earthSubject = document.querySelector('#earth-wrapper > .subject');
+const plastic_problem = document.querySelector('#plastic_problem');
+const animal_problem = document.querySelector('#animal_problem');
+const water_problem = document.querySelector('#water_problem');
 
 window.onload = function(){
     let value;
@@ -34,26 +37,65 @@ window.onload = function(){
     light.style.marginTop = -(light.getBoundingClientRect().height/2) + 'px';
     light.style.marginLeft = -(light.getBoundingClientRect().width/2) + 'px';
 
+    window.addEventListener('mousewheel',(e)=>{
+        console.log(e);
+    })
+
     window.addEventListener('scroll', ()=>{
         value = window.scrollY;
         bodyHeightPer = value / document.body.scrollHeight*100;
-
+        console.log(bodyHeightPer);
         if(bodyHeightPer > 2.6){
             submarine.style.filter = "brightness(0.7)";
-            submarine.style.opacity = '0.8';
             light.style.opacity = '0.5';
         }
 
         else{
             submarine.style.filter = "brightness(1)";
-            submarine.style.opacity = '1';
             light.style.opacity = '0';
         }
 
-        console.log(bodyHeightPer);
+        if(bodyHeightPer > 7){
+            plastic_problem.style.transition = "all 1s ease-out";
+            plastic_problem.style.opacity = 1;
+            plastic_problem.style.top = '30%';
+        }
+
+        else{
+            plastic_problem.style.transition = "none";
+            plastic_problem.style.opacity = 0;
+            plastic_problem.style.top = '-30%';
+
+        }
+
+        if(bodyHeightPer > 24.5){
+            animal_problem.style.transition = "all 1s ease-out";
+            animal_problem.style.opacity = 1;
+            animal_problem.style.top = '30%';
+        }
+
+        else{
+            animal_problem.style.transition = "none";
+            animal_problem.style.opacity = 0;
+            animal_problem.style.top = '-30%';
+
+        }
+
+        if(bodyHeightPer > 39){
+            water_problem.style.transition = "all 1s ease-out";
+            water_problem.style.opacity = 1;
+            water_problem.style.top = '30%';
+        }
+
+        else{
+            water_problem.style.transition = "none";
+            water_problem.style.opacity = 0;
+            water_problem.style.top = '-30%';
+
+        }
 
         if(bodyHeightPer > 50){
-            submarine.style.opacity = 0.8 - (bodyHeightPer-50)*0.1;
+            submarine.style.opacity = 1 - (bodyHeightPer-50)*0.15;
             light.style.opacity = 0.5 - (bodyHeightPer-50)*0.1;
         }
 

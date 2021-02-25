@@ -43,6 +43,7 @@
 }
 
 .section .problem-wrapper .problem_info .info h1 {
+  font-family: "Helvetica",sans-serif;
   font-size: 1.2rem;
   padding: 0.5rem;
 }

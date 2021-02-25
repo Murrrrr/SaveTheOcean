@@ -4,13 +4,13 @@
   position: absolute;
   z-index: 1;
   width: 100%;
-  opacity: 0.5;
+  filter: brightness(0.5);
 }
 
 #garbage1 {
   display: block;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   position: relative;
   z-index: 9;
 }
@@ -18,7 +18,7 @@
 #garbage2 {
   display: block;
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
   opacity: 0.7;
   position: relative;
   z-index: 9;
@@ -34,4 +34,10 @@
 .problem-wrapper {
   top: 50%;
   right: 5%;
+}
+
+.problem-wrapper #plastic_problem {
+  top: -30%;
+  opacity: 0;
+  transition: all 1s ease-out;
 }

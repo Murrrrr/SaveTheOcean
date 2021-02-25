@@ -8,6 +8,7 @@
   top: 0;
   z-index: 1;
   width: 100%;
+  filter: brightness(0.5);
   opacity: 0.5;
 }
 
@@ -40,4 +41,9 @@
 
 .animal_section .problem-wrapper button {
   left: 0;
+}
+
+.animal_section .problem-wrapper #animal_problem {
+  top: -30%;
+  opacity: 0;
 }
