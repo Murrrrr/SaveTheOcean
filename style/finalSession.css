@@ -43,7 +43,7 @@
   opacity: 0;
   position: absolute;
   top: 37%;
-  right: 0%;
+  right: 10%;
   width: 30%;
   transition: all 2s ease;
 }
@@ -66,7 +66,7 @@
 
 .final_section #animal-wrapper .subject {
   position: relative;
-  left: 10%;
+  left: 30%;
   order: 1;
   width: 30%;
   opacity: 0;
@@ -101,6 +101,7 @@
   width: 30%;
   opacity: 0;
   transition: all 2s ease;
+  margin-bottom: 10%;
 }
 
 .final_section #earth-wrapper .subject p {

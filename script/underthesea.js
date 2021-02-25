@@ -101,34 +101,32 @@ window.onload = function(){
 
         if(bodyHeightPer > 66){
             waterSubject.style.opacity = 1;
+            waterSubject.style.right= 0;
         }
 
         else{
             waterSubject.style.opacity = 0;
-        }
-
-        if(bodyHeightPer > 66){
-            waterSubject.style.opacity = 1;
-        }
-
-        else{
-            waterSubject.style.opacity = 0;
+            waterSubject.style.right = "10%";
         }
 
         if(bodyHeightPer > 74){
             animalSubject.style.opacity = 1;
+            animalSubject.style.left = "10%";
         }
 
         else{
+            animalSubject.style.left = "30%";
             animalSubject.style.opacity = 0;
         }
 
         if(bodyHeightPer > 81){
             earthSubject.style.opacity = 1;
+            earthSubject.style.marginBottom = 0;
         }
 
         else{
             earthSubject.style.opacity = 0;
+            earthSubject.style.marginBottom = "10%";
         }
         wave1.style.top  = 80 + (value * -0.09) + '%';
         wave2.style.top  = 70 + (value * -0.07) + '%';
